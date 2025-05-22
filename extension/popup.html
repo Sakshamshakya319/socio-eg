@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Socio.io Connection Tester</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Socio.io Connection Tester</h1>
+    
+    <div class="form-group">
+      <label for="backend-url">Backend URL:</label>
+      <input type="text" id="backend-url" placeholder="https://your-backend-url.onrender.com">
+      <button id="save-url">Save</button>
+    </div>
+    
+    <div class="test-section">
+      <h2>Test API Endpoints</h2>
+      
+      <div class="endpoint">
+        <h3>Ping Test</h3>
+        <button id="test-ping" class="test-btn">Test Ping</button>
+        <div id="ping-result" class="result"></div>
+      </div>
+      
+      <div class="endpoint">
+        <h3>Status Test</h3>
+        <button id="test-status" class="test-btn">Test Status</button>
+        <div id="status-result" class="result"></div>
+      </div>
+      
+      <div class="endpoint">
+        <h3>Text Analysis Test</h3>
+        <textarea id="test-text" placeholder="Enter text to analyze"></textarea>
+        <button id="test-text-analysis" class="test-btn">Test Text Analysis</button>
+        <div id="text-result" class="result"></div>
+      </div>
+      
+      <div class="endpoint">
+        <h3>Image Analysis Test</h3>
+        <input type="text" id="image-url" placeholder="Enter image URL to analyze">
+        <button id="test-image-analysis" class="test-btn">Test Image Analysis</button>
+        <div id="image-result" class="result"></div>
+      </div>
+    </div>
+    
+    <div class="logs">
+      <h2>Connection Logs</h2>
+      <div id="log-container"></div>
+      <button id="clear-logs">Clear Logs</button>
+    </div>
+  </div>
+  
+  <script src="js/popup.js"></script>
+</body>
+</html>
