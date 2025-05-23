@@ -2,6 +2,7 @@ services:
   - type: web
     name: socio-io-backend
     env: node
+    rootDir: backend  # Specify the subdirectory
     buildCommand: npm install
     startCommand: npm start
     envVars:
