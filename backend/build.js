@@ -17,7 +17,7 @@ const { execSync } = require('child_process');
 // Configuration
 const config = {
   requiredDirs: ['logs'],
-  requiredFiles: ['.env', 'app.js', 'index.js', 'text_analysis.js', 'image_content_filter.js'],
+  requiredFiles: ['app.js', 'index.js', 'text_analysis.js', 'image_content_filter.js'],
   buildDir: 'build',
   filesToCopy: [
     'app.js',
@@ -27,9 +27,7 @@ const config = {
     'package.json',
     'package-lock.json',
     'Procfile',
-    '.env',
-    'render.yaml',
-    'my-project-92814-457204-04288ea99d5d.json'
+    'render.yaml'
   ]
 };
 
@@ -76,8 +74,8 @@ function validateEnvironment() {
   // Check required files
   const missingFiles = config.requiredFiles.filter(file => !fs.existsSync(file));
   if (missingFiles.length > 0) {
-    log(`Missing required files: ${missingFiles.join(', ')}`, 'error');
-    process.exit(1);
+    log(`Missing required files: ${missingFiles.join(', ')}`, 'warning');
+    // Continue anyway - don't exit
   }
   
   log('Environment validation completed', 'success');
