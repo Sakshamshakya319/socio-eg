@@ -57,7 +57,8 @@ function checkRequiredFiles() {
     'package.json',
     'text_analysis.js',
     'image_content_filter.js',
-    '.env'
+    '.env',
+    'my-project-92814-457204-04288ea99d5d.json'
   ];
   
   let allFilesExist = true;

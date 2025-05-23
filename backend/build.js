@@ -17,17 +17,19 @@ const { execSync } = require('child_process');
 // Configuration
 const config = {
   requiredDirs: ['logs'],
-  requiredFiles: ['.env', 'server.js', 'content_filter.js', 'text_analysis.js'],
+  requiredFiles: ['.env', 'app.js', 'index.js', 'text_analysis.js', 'image_content_filter.js'],
   buildDir: 'build',
   filesToCopy: [
-    'server.js',
-    'content_filter.js',
+    'app.js',
+    'index.js',
+    'image_content_filter.js',
     'text_analysis.js',
     'package.json',
     'package-lock.json',
     'Procfile',
     '.env',
-    'render.yaml'
+    'render.yaml',
+    'my-project-92814-457204-04288ea99d5d.json'
   ]
 };
 
